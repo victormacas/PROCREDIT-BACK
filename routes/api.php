@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\API\ClientController;
+use App\Http\Controllers\API\CreditController;
 use App\Http\Controllers\API\SavingController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,7 +22,13 @@ use Illuminate\Support\Facades\Route;
 //    return $request->user();
 //});
 
-route::get('Saving',[SavingController::class, 'index']);
+route::get('saving',[SavingController::class, 'index']);
 route::get('flexSaving',[SavingController::class, 'get_flex']);
 route::get('dpfSaving',[SavingController::class, 'get_dpf']);
 route::post('client',[ClientController::class,'store']);
+
+route::get('credits',[CreditController::class,'index']);
+route::get('creditoEducativo',[CreditController::class,'get_educativo']);
+route::get('creditoInversion',[CreditController::class,'get_inversion']);
+route::get('creditoInmobiliario',[CreditController::class,'get_inmobiliario']);
+
