@@ -17,6 +17,7 @@ class CreateCreditsTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->double('tasa');
+            $table->double('tasa_ecologica');
             $table->double('montomin');
             $table->double('montomax');
             $table->integer('tiempomin')->unsigned();;
