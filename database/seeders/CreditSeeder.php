@@ -66,7 +66,7 @@ class CreditSeeder extends Seeder
             'name'=>'dpf',
             'rate'=>5,
             'minimum_time'=>6,
-            'maximum_time'=>6,
+            'maximum_time'=>60,
         ]);
     }
 }
