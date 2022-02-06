@@ -4,6 +4,7 @@
 use App\Http\Controllers\API\ClientController;
 use App\Http\Controllers\API\CreditController;
 use App\Http\Controllers\API\SavingController;
+use App\Http\Controllers\API\TaxController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -32,3 +33,10 @@ route::get('creditoEducativo',[CreditController::class,'get_educativo']);
 route::get('creditoInversion',[CreditController::class,'get_inversion']);
 route::get('creditoInmobiliario',[CreditController::class,'get_inmobiliario']);
 
+Route::prefix('tax')->group(function () {
+    Route::get('/',[ TaxController::class, 'getAll']);
+    Route::post('/',[ TaxController::class, 'create']);
+    Route::delete('/{id}',[ TaxController::class, 'delete']);
+    Route::get('/{id}',[ TaxController::class, 'get']);
+    Route::put('/{id}',[ TaxController::class, 'update']);
+});

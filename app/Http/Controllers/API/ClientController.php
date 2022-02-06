@@ -40,7 +40,6 @@ class ClientController extends Controller
     public function store(Request $request)
     {
         //
-//        return "llego hasta aqui";
         try{
             $message="Ingresado Exitosamente";
             Client::create($request->all());
