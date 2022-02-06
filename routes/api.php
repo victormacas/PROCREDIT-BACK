@@ -31,5 +31,5 @@ route::get('credits',[CreditController::class,'index']);
 route::get('creditoEducativo',[CreditController::class,'get_educativo']);
 route::get('creditoInversion',[CreditController::class,'get_inversion']);
 route::get('creditoInmobiliario',[CreditController::class,'get_inmobiliario']);
-//PRUEBA
+//PRUEBA TAXES
 
